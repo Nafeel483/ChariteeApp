@@ -1,27 +1,27 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import Colors from '../../Styles/Colors';
 const widthScreen = Dimensions.get('window').width;
 const heightScreen = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   safeViewStyle: {
     flex: 1,
-    backgroundColor: '#F7F8FA'
+    backgroundColor: '#F7F8FA',
   },
   safeViewStyle1: {
-    backgroundColor: Colors.White
+    backgroundColor: Colors.White,
   },
   mainContainer: {
     width: widthScreen,
     backgroundColor: Colors.White,
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    marginTop: -20
+    marginTop: -20,
   },
   headerText: {
     marginTop: 20,
     textAlign: 'center',
     fontSize: 25,
-    fontWeight: '600'
+    fontWeight: '600',
   },
   mainWrapper: {
     flexDirection: 'row',
@@ -29,32 +29,32 @@ const styles = StyleSheet.create({
   description1: {
     color: '#4B97FC',
     fontSize: 20,
-    fontWeight: '700'
+    fontWeight: '700',
   },
   description2: {
     color: '#7689A2',
     fontSize: 15,
     fontWeight: '500',
     marginTop: 5,
-    marginLeft: 3
+    marginLeft: 3,
   },
   description3: {
     color: '#073C7A',
     fontSize: 17,
     fontWeight: '600',
     marginTop: 3,
-    marginLeft: 3
+    marginLeft: 3,
   },
   mainContainerWrapper: {
     width: widthScreen / 1.13,
     alignSelf: 'center',
-    marginBottom: 20
+    marginBottom: 20,
   },
   dataContentWrapper: {
     flexDirection: 'row',
     marginTop: 20,
     marginBottom: 15,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   dataContentWrapper1: {
     width: widthScreen / 1.1,
@@ -63,11 +63,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 25,
     // marginBottom: 20,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   startStyle: {
     width: 70,
-    height: 70
+    height: 70,
   },
   description4: {
     color: '#073C7A',
@@ -88,11 +88,11 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '500',
     marginTop: 5,
-    marginLeft: -10
+    marginLeft: -10,
   },
   mainWrapperButton: {
     flexDirection: 'row',
-    marginTop: 20
+    marginTop: 20,
   },
   buttonWrapper: {
     width: 80,
@@ -101,12 +101,11 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.appHeaderColor,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 12
+    borderRadius: 12,
   },
   buttonText: {
     color: Colors.White,
     fontSize: 15,
-
   },
   buttonWrapper1: {
     width: 80,
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    marginLeft: 10
+    marginLeft: 10,
   },
   buttonText1: {
     color: Colors.appHeaderColor,
@@ -127,26 +126,26 @@ const styles = StyleSheet.create({
   },
   aboutDetailsText: {
     marginTop: 20,
-    fontSize: 13
+    fontSize: 13,
   },
   aboutDetailsText1: {
     fontSize: 15,
     marginTop: 15,
     color: Colors.appHeaderColor,
     fontWeight: '500',
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
   },
   bottomWrapper44: {
     width: widthScreen,
     height: 100,
     backgroundColor: Colors.White,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottomButtonWrapper: {
     flexDirection: 'row',
     width: widthScreen / 1.11,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   downloadButton: {
     width: 50,
@@ -154,7 +153,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 12,
-    backgroundColor: Colors.appHeaderColor
+    backgroundColor: Colors.appHeaderColor,
   },
   downloadStyle: {
     width: 30,
@@ -167,25 +166,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    marginLeft: 10
+    marginLeft: 10,
   },
   donateText: {
     fontSize: 17,
     fontWeight: '500',
-    color: Colors.White
+    color: Colors.White,
   },
   rightArrowStyle: {
     width: 30,
     height: 16,
     marginTop: 3,
-    marginLeft: 10
+    marginLeft: 10,
   },
   backContainer: {
     width: 40,
     height: 40,
     backgroundColor: 'rgba(255, 255, 255, 0.16)',
     borderRadius: 40,
-    justifyContent: "center",
+    justifyContent: 'center',
     alignItems: 'center',
     marginBottom: -60,
     marginLeft: 20,
@@ -194,12 +193,12 @@ const styles = StyleSheet.create({
   indecatorStyle: {
     width: 30,
     height: 30,
-    tintColor: Colors.White
+    tintColor: Colors.White,
   },
   mainDescriptionWrapper: {
     marginBottom: 20,
     width: widthScreen / 1.12,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   mainProfileWrapper: {
     width: 50,
@@ -207,7 +206,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 11,
-    backgroundColor: '#DFE8FF'
+    backgroundColor: '#DFE8FF',
   },
   mainProfileWrapper1: {
     width: 50,
@@ -216,7 +215,7 @@ const styles = StyleSheet.create({
   },
   textWrapper: {
     fontSize: 18,
-    color: '#4890F0'
+    color: '#4890F0',
   },
   textWrapperHours: {
     fontSize: 15,
@@ -228,19 +227,19 @@ const styles = StyleSheet.create({
     color: '#05263D',
     fontWeight: '500',
     marginTop: 11,
-    marginLeft: 15
+    marginLeft: 15,
   },
   cardWrapper: {
     width: widthScreen / 1.12,
     alignSelf: 'center',
     backgroundColor: Colors.White,
     borderRadius: 15,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.20,
+    shadowOpacity: 0.2,
     shadowRadius: 1.41,
 
     elevation: 2,
@@ -250,13 +249,13 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 20,
     width: '90%',
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   title: {
     fontSize: 21,
     fontWeight: '500',
     color: '#05263D',
-    marginTop: 10
+    marginTop: 10,
   },
   description: {
     fontSize: 13,

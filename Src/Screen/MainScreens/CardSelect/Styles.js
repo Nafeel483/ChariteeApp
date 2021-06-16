@@ -1,19 +1,18 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
-import Metrics from '../../../Styles/Metrices';
+import {StyleSheet, Dimensions} from 'react-native';
 import Colors from '../../../Styles/Colors';
 
 const widthScreen = Dimensions.get('window').width;
 const styles = StyleSheet.create({
   mainConatiner: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   mainHeader: {
     flexDirection: 'row',
     marginTop: 25,
     width: widthScreen / 1.12,
     alignSelf: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   indecatorStyle: {
     width: 30,
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
   },
   paymentContainer: {
     marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
   },
   showPaymentWrapper: {
     flexDirection: 'row',
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     borderWidth: 1,
     height: 70,
-    alignItems: "center"
+    alignItems: 'center',
   },
   mainProfileWrapper1: {
     width: 30,
@@ -54,7 +53,7 @@ const styles = StyleSheet.create({
     width: 140,
     height: 45,
     marginLeft: 15,
-    marginTop: -8
+    marginTop: -8,
   },
   logoWrapper: {
     width: 100,
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 20,
     marginLeft: 15,
-    marginTop: 4
+    marginTop: 4,
   },
   logoWrapper2: {
     width: 130,
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
     marginLeft: 10,
-    marginTop: 2
+    marginTop: 2,
   },
   donateButton: {
     width: widthScreen / 1.12,
@@ -93,19 +92,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    alignSelf: "center",
-    marginBottom: 20
+    alignSelf: 'center',
+    marginBottom: 20,
   },
   buttonText: {
     fontSize: 18,
     fontWeight: '500',
-    color: Colors.White
+    color: Colors.White,
   },
   rightArrowStyle1: {
     width: 27,
     height: 13,
     marginTop: 6,
-    marginLeft: 10
+    marginLeft: 10,
   },
   titleText1: {
     fontSize: 12,
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     color: '#6D7E92',
     width: '88%',
-    alignSelf: "center"
+    alignSelf: 'center',
   },
   headerText: {
     fontSize: 19,
@@ -123,7 +122,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     marginTop: 25,
     width: '90%',
-    alignSelf: "center"
-  }
+    alignSelf: 'center',
+  },
 });
-export default styles;  
+export default styles;

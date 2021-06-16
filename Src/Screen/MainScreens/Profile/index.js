@@ -1,9 +1,5 @@
-import React, { Component } from 'react';
-import { View, Image, ImageBackground, Text, TouchableOpacity, SafeAreaView } from 'react-native';
-import { TextInput } from 'react-native-paper';
-import Images from '../../../Styles/Images';
-import Colors from '../../../Styles/Colors';
-import * as Constants from '../../../Constants';
+import React, {Component} from 'react';
+import {SafeAreaView} from 'react-native';
 import Styles from './Styles';
 
 class Profile extends Component {
@@ -11,24 +7,18 @@ class Profile extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
     };
     this.moved = false;
   }
 
   render() {
-    const { email, password } = this.state;
     return (
       <>
-        <SafeAreaView style={Styles.mainConatiner}>
-
-
-        </SafeAreaView>
+        <SafeAreaView style={Styles.mainConatiner} />
       </>
     );
   }
 }
-
-
 
 export default Profile;

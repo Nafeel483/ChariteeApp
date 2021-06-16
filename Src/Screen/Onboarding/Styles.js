@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import Metrics from '../../Styles/Metrices';
 import Colors from '../../Styles/Colors';
 
@@ -8,16 +8,16 @@ const styles = StyleSheet.create({
     flex: 1,
     width: Metrics.screenWidth,
     height: Metrics.screenHeight,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   introFirstImage: {
     width: '75%',
-    height: 300
+    height: 300,
   },
   mainContainer: {
     flex: 0.6,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottomContainer: {
     flex: 0.4,
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: '700',
     alignSelf: 'center',
-    color: Colors.black
+    color: Colors.black,
   },
   descriptionText: {
     fontSize: 17,
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     textAlign: 'center',
     width: widthScreen / 1.2,
-    alignSelf: 'center'
   },
   descriptionText1: {
     fontSize: 17,
@@ -48,7 +47,6 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     textAlign: 'center',
     width: '70%',
-    alignSelf: 'center'
   },
   descriptionText2: {
     fontSize: 17,
@@ -57,8 +55,7 @@ const styles = StyleSheet.create({
     color: Colors.textColor,
     marginTop: '10%',
     width: '45%',
-    alignSelf: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   descriptionText3: {
     fontSize: 17,
@@ -67,20 +64,19 @@ const styles = StyleSheet.create({
     color: Colors.textColor,
     textAlign: 'center',
     width: '70%',
-    alignSelf: 'center'
   },
   indecatorStyle: {
     width: 70,
     height: 9,
-    marginTop: '10%'
+    marginTop: '10%',
   },
   introSecondImage: {
     width: '95%',
-    height: 320
+    height: 320,
   },
   introThirdImage: {
     width: '78%',
-    height: 340
+    height: 340,
   },
   buttoWrapper: {
     marginTop: '18%',
@@ -90,11 +86,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 50,
     borderRadius: 12,
-    backgroundColor: Colors.appHeaderColor
+    backgroundColor: Colors.appHeaderColor,
   },
   buttonText: {
     fontSize: 17,
-    fontWeight: '700'
+    fontWeight: '700',
   },
   donateButton: {
     marginTop: '10%',
@@ -104,18 +100,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    alignSelf: "center"
+    alignSelf: 'center',
   },
   donateText: {
     fontSize: 18,
     fontWeight: '500',
-    color: Colors.White
+    color: Colors.White,
   },
   rightArrowStyle: {
     width: 27,
     height: 13,
     marginTop: 6,
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 });
-export default styles;  
+export default styles;

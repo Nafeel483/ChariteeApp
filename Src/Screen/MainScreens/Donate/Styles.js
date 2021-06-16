@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import Metrics from '../../../Styles/Metrices';
 import Colors from '../../../Styles/Colors';
 
@@ -8,16 +8,16 @@ const styles = StyleSheet.create({
     flex: 1,
     width: Metrics.screenWidth,
     height: Metrics.screenHeight,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   introFirstImage: {
     width: '80%',
-    height: 230
+    height: 230,
   },
   mainContainer: {
     flex: 0.6,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottomContainer: {
     flex: 0.4,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     marginLeft: 10,
     marginTop: 15,
-    color: Colors.appHeaderColor
+    color: Colors.appHeaderColor,
   },
   titleText1: {
     fontSize: 35,
@@ -45,20 +45,20 @@ const styles = StyleSheet.create({
   },
   headerWrapper: {
     width: widthScreen / 1.12,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   bottomTextHeader: {
     marginTop: 20,
     fontSize: 23,
-    fontWeight: '500'
+    fontWeight: '500',
   },
   description: {
     marginTop: 20,
     fontSize: 15,
     width: '85%',
-    alignSelf: "center",
+    alignSelf: 'center',
     color: '#6D7E92',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   mainProfileWrapper: {
     width: 50,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 50,
-    backgroundColor: '#F5F8FC'
+    backgroundColor: '#F5F8FC',
   },
   mainProfileWrapper1: {
     width: 30,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     height: 16,
     marginTop: 10,
     tintColor: Colors.appHeaderColor,
-    marginRight: 15
+    marginRight: 15,
   },
   showPaymentWrapper: {
     flexDirection: 'row',
@@ -87,16 +87,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: Colors.White,
     borderRadius: 15,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.20,
+    shadowOpacity: 0.2,
     shadowRadius: 1.41,
     height: 70,
     elevation: 2,
-    alignItems: "center"
-  }
+    alignItems: 'center',
+  },
 });
-export default styles;  
+export default styles;

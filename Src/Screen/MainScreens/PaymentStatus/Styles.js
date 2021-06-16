@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import Metrics from '../../../Styles/Metrices';
 import Colors from '../../../Styles/Colors';
 
@@ -8,11 +8,11 @@ const styles = StyleSheet.create({
     flex: 1,
     width: Metrics.screenWidth,
     height: Metrics.screenHeight,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   introFirstImage: {
     width: '80%',
-    height: 230
+    height: 230,
   },
   introFailedImage: {
     width: '60%',
@@ -21,12 +21,12 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   mainContainerfailed: {
     flex: 0.7,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottomContainer: {
     flex: 0.3,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     marginLeft: 10,
     marginTop: 15,
-    color: Colors.appHeaderColor
+    color: Colors.appHeaderColor,
   },
   titleText1: {
     fontSize: 35,
@@ -54,43 +54,43 @@ const styles = StyleSheet.create({
   },
   headerWrapper: {
     width: widthScreen / 1.12,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   bottomTextHeader: {
     marginTop: 20,
     fontSize: 23,
-    fontWeight: '500'
+    fontWeight: '500',
   },
   failedHeaderText: {
     marginTop: 20,
     fontSize: 18,
     width: '80%',
-    alignSelf: "center",
-    textAlign: 'center'
+    alignSelf: 'center',
+    textAlign: 'center',
   },
   description: {
     marginTop: 20,
     fontSize: 15,
     width: '85%',
-    alignSelf: "center",
+    alignSelf: 'center',
     color: '#6D7E92',
-    textAlign: 'center'
+    textAlign: 'center',
   },
-  descriptionFailed:{
+  descriptionFailed: {
     marginTop: 20,
     fontSize: 15,
     width: '80%',
-    alignSelf: "center",
+    alignSelf: 'center',
     color: '#6D7E92',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   description2: {
     marginTop: 20,
     fontSize: 15,
     width: '85%',
-    alignSelf: "center",
+    alignSelf: 'center',
     color: '#6D7E92',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   mainProfileWrapper: {
     width: 50,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 50,
-    backgroundColor: '#F5F8FC'
+    backgroundColor: '#F5F8FC',
   },
   mainProfileWrapper1: {
     width: 30,
@@ -109,23 +109,23 @@ const styles = StyleSheet.create({
     height: 16,
     marginTop: 20,
     tintColor: Colors.appHeaderColor,
-    marginRight: 15
+    marginRight: 15,
   },
   showPaymentWrapper: {
     width: widthScreen / 1.12,
     alignSelf: 'center',
     backgroundColor: Colors.White,
     borderRadius: 15,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.20,
+    shadowOpacity: 0.2,
     shadowRadius: 1.41,
     elevation: 2,
-    alignItems: "center",
-    marginTop: 30
+    alignItems: 'center',
+    marginTop: 30,
   },
   donateButton: {
     width: widthScreen / 1.12,
@@ -134,9 +134,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginBottom: 20,
-    marginTop: 20
+    marginTop: 20,
   },
   donateButtonFailed: {
     width: widthScreen / 1.12,
@@ -145,26 +145,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    alignSelf: "center",
-    marginTop: 20
+    alignSelf: 'center',
+    marginTop: 20,
   },
   buttonText: {
     fontSize: 18,
     fontWeight: '500',
-    color: Colors.White
+    color: Colors.White,
   },
   rightArrowStyle1: {
     width: 27,
     height: 13,
     marginTop: 6,
-    marginLeft: 10
+    marginLeft: 10,
   },
-  seperator: {
+  separator: {
     borderBottomWidth: 1,
     borderBottomColor: '#DADFE6',
     marginTop: 15,
     marginBottom: 15,
-    width: '90%'
+    width: '90%',
   },
   mainWrapper: {
     flexDirection: 'row',
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
     color: '#4B97FC',
     fontSize: 25,
     marginLeft: 10,
-    fontWeight: '700'
+    fontWeight: '700',
   },
   failedHomeButton: {
     width: widthScreen / 1.12,
@@ -185,14 +185,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginBottom: 20,
-    marginTop: 20
+    marginTop: 20,
   },
-  failedbButtonText: {
+  failedButtonText: {
     fontSize: 18,
     fontWeight: '500',
-    color: Colors.appHeaderColor
-  }
+    color: Colors.appHeaderColor,
+  },
 });
 export default styles;

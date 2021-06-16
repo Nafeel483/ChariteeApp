@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import {
-  ScrollView, View, Image, Text, Dimensions,
-  TextInput, TouchableOpacity, StyleSheet, Alert
-} from 'react-native'
+import React, {Component} from 'react';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Modal from 'react-native-modal';
 import Styles from './Styles';
 import CheckBox from '@react-native-community/checkbox';
 import Images from '../../Styles/Images';
 import Colors from '../../Styles/Colors';
-import * as Constants from '../../Constants';
 import ModalDropdown from 'react-native-modal-dropdown';
-
 
 class FilterWrapper extends Component {
   constructor(props) {
@@ -23,100 +18,89 @@ class FilterWrapper extends Component {
       animals: false,
       ecology: false,
       language: '',
-
     };
   }
   handleChangeFlag = (selectedOption) => {
-    this.setState({ language: selectedOption })
-  }
+    this.setState({language: selectedOption});
+  };
   selectAll = (newValue) => {
-    const { counter } = this.props
-    if (newValue == true) {
-      this.props.selectCounter(counter + 1)
-      this.setState({ all: newValue })
+    const {counter} = this.props;
+    if (newValue === true) {
+      this.props.selectCounter(counter + 1);
+      this.setState({all: newValue});
+    } else {
+      this.props.selectCounter(counter - 1);
+      this.setState({all: newValue});
     }
-    else {
-      this.props.selectCounter(counter - 1)
-      this.setState({ all: newValue })
-    }
-  }
+  };
   selectAdult = (newValue) => {
-    const { counter } = this.props
-    if (newValue == true) {
-      this.props.selectCounter(counter + 1)
-      this.setState({ adult: newValue })
+    const {counter} = this.props;
+    if (newValue === true) {
+      this.props.selectCounter(counter + 1);
+      this.setState({adult: newValue});
+    } else {
+      this.props.selectCounter(counter - 1);
+      this.setState({adult: newValue});
     }
-    else {
-      this.props.selectCounter(counter - 1)
-      this.setState({ adult: newValue })
-    }
-  }
+  };
   selectChildren = (newValue) => {
-    const { counter } = this.props
-    if (newValue == true) {
-      this.props.selectCounter(counter + 1)
-      this.setState({ children: newValue })
+    const {counter} = this.props;
+    if (newValue === true) {
+      this.props.selectCounter(counter + 1);
+      this.setState({children: newValue});
+    } else {
+      this.props.selectCounter(counter - 1);
+      this.setState({children: newValue});
     }
-    else {
-      this.props.selectCounter(counter - 1)
-      this.setState({ children: newValue })
-    }
-  }
+  };
 
   selectElderly = (newValue) => {
-    const { counter } = this.props
-    if (newValue == true) {
-      this.props.selectCounter(counter + 1)
-      this.setState({ elderly: newValue })
+    const {counter} = this.props;
+    if (newValue === true) {
+      this.props.selectCounter(counter + 1);
+      this.setState({elderly: newValue});
+    } else {
+      this.props.selectCounter(counter - 1);
+      this.setState({elderly: newValue});
     }
-    else {
-      this.props.selectCounter(counter - 1)
-      this.setState({ elderly: newValue })
-    }
-  }
-
+  };
 
   selectAnimal = (newValue) => {
-    const { counter } = this.props
-    if (newValue == true) {
-      this.props.selectCounter(counter + 1)
-      this.setState({ animals: newValue })
+    const {counter} = this.props;
+    if (newValue === true) {
+      this.props.selectCounter(counter + 1);
+      this.setState({animals: newValue});
+    } else {
+      this.props.selectCounter(counter - 1);
+      this.setState({animals: newValue});
     }
-    else {
-      this.props.selectCounter(counter - 1)
-      this.setState({ animals: newValue })
-    }
-  }
-
+  };
 
   selectEcology = (newValue) => {
-    const { counter } = this.props
-    if (newValue == true) {
-      this.props.selectCounter(counter + 1)
-      this.setState({ ecology: newValue })
+    const {counter} = this.props;
+    if (newValue === true) {
+      this.props.selectCounter(counter + 1);
+      this.setState({ecology: newValue});
+    } else {
+      this.props.selectCounter(counter - 1);
+      this.setState({ecology: newValue});
     }
-    else {
-      this.props.selectCounter(counter - 1)
-      this.setState({ ecology: newValue })
-    }
-  }
+  };
 
   render() {
-    const { all, adult, children, elderly, animals, ecology, language } = this.state
-    const Language = [
-      'Breakfast',
-      'Lunch',
-      'Dinner',
-      'Snaks',
-    ]
+    const {all, adult, children, elderly, animals, ecology, language} =
+      this.state;
+    const Language = ['Breakfast', 'Lunch', 'Dinner', 'Snaks'];
     return (
       <>
         <Modal isVisible={this.props.filterModel} style={Styles.modelContainer}>
-          <TouchableOpacity style={{ backgroundColor: 'transparent', height: 150 }}>
-          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: 'transparent',
+              height: 150,
+            }}></TouchableOpacity>
           <View style={Styles.modelContainerWrapper}>
             <View style={Styles.mainWrapper}>
-
               <View style={Styles.mainHeader}>
                 <View />
                 <Text style={Styles.headerText}>{'Filters'}</Text>
@@ -124,11 +108,10 @@ class FilterWrapper extends Component {
                   <Text style={Styles.cancelText}>{'Cancel'}</Text>
                 </TouchableOpacity>
               </View>
-              <View style={Styles.seperator} />
+              <View style={Styles.separator} />
 
               <Text style={Styles.mainContentText}>{'Regions projects'}</Text>
               <View style={Styles.dropDownWrapper}>
-
                 <ModalDropdown
                   style={{
                     width: '90%',
@@ -159,14 +142,15 @@ class FilterWrapper extends Component {
                     marginTop: 3,
                     borderWidth: 0,
                     borderColor: '#e0e4e5',
-                    maxHeight: 70
+                    maxHeight: 70,
                   }}
-
                   onSelect={(index, value) => this.handleChangeFlag(value)}
                   options={Language}
-
                 />
-                <Image style={{ width: 20, height: 20, marginTop: 10 }} source={Images.down} />
+                <Image
+                  style={{width: 20, height: 20, marginTop: 10}}
+                  source={Images.down}
+                />
               </View>
 
               <Text style={Styles.mainContentText}>{'Сategory'}</Text>
@@ -174,14 +158,15 @@ class FilterWrapper extends Component {
               <View style={Styles.categoryContent}>
                 <CheckBox
                   disabled={false}
-                  boxType='square'
+                  boxType="square"
                   onCheckColor={Colors.appHeaderColor}
                   onTintColor={Colors.appHeaderColor}
                   tintColor={'#DADFE6'}
                   value={all}
                   style={{
-                    marginTop: 5, width: 20,
-                    height: 20
+                    marginTop: 5,
+                    width: 20,
+                    height: 20,
                   }}
                   onValueChange={(newValue) => this.selectAll(newValue)}
                 />
@@ -191,14 +176,15 @@ class FilterWrapper extends Component {
               <View style={Styles.categoryContent}>
                 <CheckBox
                   disabled={false}
-                  boxType='square'
+                  boxType="square"
                   onCheckColor={Colors.appHeaderColor}
                   onTintColor={Colors.appHeaderColor}
                   tintColor={'#DADFE6'}
                   value={adult}
                   style={{
-                    marginTop: 5, width: 20,
-                    height: 20
+                    marginTop: 5,
+                    width: 20,
+                    height: 20,
                   }}
                   onValueChange={(newValue) => this.selectAdult(newValue)}
                 />
@@ -208,14 +194,15 @@ class FilterWrapper extends Component {
               <View style={Styles.categoryContent}>
                 <CheckBox
                   disabled={false}
-                  boxType='square'
+                  boxType="square"
                   onCheckColor={Colors.appHeaderColor}
                   onTintColor={Colors.appHeaderColor}
                   tintColor={'#DADFE6'}
                   value={children}
                   style={{
-                    marginTop: 5, width: 20,
-                    height: 20
+                    marginTop: 5,
+                    width: 20,
+                    height: 20,
                   }}
                   onValueChange={(newValue) => this.selectChildren(newValue)}
                 />
@@ -225,14 +212,15 @@ class FilterWrapper extends Component {
               <View style={Styles.categoryContent}>
                 <CheckBox
                   disabled={false}
-                  boxType='square'
+                  boxType="square"
                   onCheckColor={Colors.appHeaderColor}
                   onTintColor={Colors.appHeaderColor}
                   tintColor={'#DADFE6'}
                   value={elderly}
                   style={{
-                    marginTop: 5, width: 20,
-                    height: 20
+                    marginTop: 5,
+                    width: 20,
+                    height: 20,
                   }}
                   onValueChange={(newValue) => this.selectElderly(newValue)}
                 />
@@ -242,14 +230,15 @@ class FilterWrapper extends Component {
               <View style={Styles.categoryContent}>
                 <CheckBox
                   disabled={false}
-                  boxType='square'
+                  boxType="square"
                   onCheckColor={Colors.appHeaderColor}
                   onTintColor={Colors.appHeaderColor}
                   tintColor={'#DADFE6'}
                   value={animals}
                   style={{
-                    marginTop: 5, width: 20,
-                    height: 20
+                    marginTop: 5,
+                    width: 20,
+                    height: 20,
                   }}
                   onValueChange={(newValue) => this.selectAnimal(newValue)}
                 />
@@ -259,21 +248,22 @@ class FilterWrapper extends Component {
               <View style={Styles.categoryContent}>
                 <CheckBox
                   disabled={false}
-                  boxType='square'
+                  boxType="square"
                   onCheckColor={Colors.appHeaderColor}
                   onTintColor={Colors.appHeaderColor}
                   tintColor={'#DADFE6'}
                   value={ecology}
                   style={{
-                    marginTop: 5, width: 20,
-                    height: 20
+                    marginTop: 5,
+                    width: 20,
+                    height: 20,
                   }}
                   onValueChange={(newValue) => this.selectEcology(newValue)}
                 />
                 <Text style={Styles.checkBoxText}>{'Ecology'}</Text>
               </View>
               {/* End */}
-              <View style={Styles.seperator1} />
+              <View style={Styles.separator1} />
 
               {/* Bottom Button */}
               <View style={Styles.bottomButtonWrapper}>
@@ -283,19 +273,21 @@ class FilterWrapper extends Component {
                 </TouchableOpacity>
                 {/* Donate */}
                 <TouchableOpacity style={Styles.donateButton}>
-                  <View style={{ flexDirection: 'row' }}>
+                  <View style={{flexDirection: 'row'}}>
                     <Text style={Styles.donateText}>{'Show 20 projects'}</Text>
-                    <Image source={Images.right} style={Styles.rightArrowStyle} />
+                    <Image
+                      source={Images.right}
+                      style={Styles.rightArrowStyle}
+                    />
                   </View>
                 </TouchableOpacity>
                 {/* Ends */}
               </View>
-
             </View>
           </View>
         </Modal>
       </>
-    )
+    );
   }
 }
 export default FilterWrapper;

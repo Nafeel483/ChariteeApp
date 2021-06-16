@@ -1,18 +1,17 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
-import Metrics from '../../../Styles/Metrices';
+import {StyleSheet, Dimensions} from 'react-native';
 import Colors from '../../../Styles/Colors';
 
 const widthScreen = Dimensions.get('window').width;
 const styles = StyleSheet.create({
   mainConatiner1: {
-    backgroundColor: Colors.White
+    backgroundColor: Colors.White,
   },
   mainConatiner: {
     flex: 1,
-    backgroundColor: '#F2F5FC'
+    backgroundColor: '#F2F5FC',
   },
   mainHeader: {
-    backgroundColor: Colors.White
+    backgroundColor: Colors.White,
   },
   headerContainer: {
     width: widthScreen / 1.12,
@@ -24,57 +23,54 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontWeight: '700',
     color: Colors.black,
-    marginBottom: 20,
   },
   titleText1: {
     fontSize: 27,
     fontWeight: '500',
     color: Colors.black,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   emailWrapper: {
     marginTop: 20,
     flexDirection: 'row',
-    borderWidth: 1,
-    borderColor: "#F2F5FC",
+    borderColor: '#F2F5FC',
     borderRadius: 12,
-    backgroundColor: "#F2F5FC",
-    height: 50,
+    backgroundColor: '#F2F5FC',
+    height: 40,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    width: widthScreen / 1.2,
+    width: widthScreen / 1.1,
   },
   emailInput: {
-    marginLeft: 20,
+    marginLeft: 4,
     flex: 1,
-    fontSize: 17,
-    margin: 10
+    fontSize: 14,
+    margin: 10,
   },
   inputImageLock: {
-    width: 40,
-    height: 40,
-    marginLeft: 20,
+    width: 24,
+    height: 24,
+    marginLeft: 14,
   },
   mainWrapperButton: {
     flexDirection: 'row',
     marginTop: 20,
     width: widthScreen / 1.1,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   buttonWrapper: {
-    width: 87,
-    height: 40,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
     backgroundColor: Colors.appHeaderColor,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    marginLeft: 6
+    marginLeft: 6,
   },
   buttonText: {
     color: Colors.White,
     fontSize: 14,
-
   },
   buttonWrapper1: {
     width: 80,
@@ -83,11 +79,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    marginLeft: 10
+    marginLeft: 10,
   },
   mainScrollWrapper: {
     marginTop: 15,
-    marginBottom: 15
+    marginBottom: 15,
   },
   filterStyle: {
     width: 100,
@@ -112,7 +108,8 @@ const styles = StyleSheet.create({
   },
   tagTextStyle: {
     fontSize: 14,
-    color: Colors.White
+    color: Colors.White,
   },
 });
-export default styles;  
+
+export default styles;

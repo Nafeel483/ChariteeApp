@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import Metrics from '../../../Styles/Metrices';
 import Colors from '../../../Styles/Colors';
 
@@ -8,16 +8,16 @@ const styles = StyleSheet.create({
     flex: 1,
     width: Metrics.screenWidth,
     height: Metrics.screenHeight,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   introFirstImage: {
     width: '65%',
-    height: 250
+    height: 250,
   },
   mainContainer: {
     flex: 0.55,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottomContainer: {
     flex: 0.4,
@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     textAlign: 'center',
     width: widthScreen / 1.2,
-    alignSelf: 'center'
   },
   descriptionText1: {
     fontSize: 17,
@@ -49,7 +48,6 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     textAlign: 'center',
     width: '70%',
-    alignSelf: 'center'
   },
   descriptionText2: {
     fontSize: 17,
@@ -58,8 +56,7 @@ const styles = StyleSheet.create({
     color: Colors.textColor,
     marginTop: '10%',
     width: '45%',
-    alignSelf: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   descriptionText3: {
     fontSize: 17,
@@ -68,21 +65,20 @@ const styles = StyleSheet.create({
     color: Colors.textColor,
     textAlign: 'center',
     width: '70%',
-    alignSelf: 'center'
   },
   indecatorStyle: {
     width: 30,
     height: 30,
     marginTop: '16%',
-    marginLeft: 20
+    marginLeft: 20,
   },
   introSecondImage: {
     width: '95%',
-    height: 320
+    height: 320,
   },
   introThirdImage: {
     width: '78%',
-    height: 340
+    height: 340,
   },
   buttoWrapper: {
     marginTop: '18%',
@@ -92,11 +88,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 50,
     borderRadius: 12,
-    backgroundColor: Colors.appHeaderColor
+    backgroundColor: Colors.appHeaderColor,
   },
   buttonText: {
     fontSize: 17,
-    fontWeight: '700'
+    fontWeight: '700',
   },
   donateButton: {
     marginTop: '10%',
@@ -106,7 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    alignSelf: "center"
+    alignSelf: 'center',
   },
   appleButton: {
     marginTop: 20,
@@ -116,7 +112,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    alignSelf: "center"
+    alignSelf: 'center',
   },
   donateText: {
     fontSize: 18,
@@ -136,7 +132,6 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     // marginTop: 3,
-
   },
   appleStyle: {
     width: 20,
@@ -148,21 +143,21 @@ const styles = StyleSheet.create({
   },
   bottomText1: {
     fontSize: 14,
-    color: Colors.textColor
+    color: Colors.textColor,
   },
   bottomTerm: {
     fontSize: 14,
-    color: '#4890F0'
+    color: '#4890F0',
   },
   bottomTerm1: {
     fontSize: 14,
     color: '#4890F0',
-    marginLeft: 3
+    marginLeft: 3,
   },
   bottomAnd: {
     fontSize: 14,
     color: Colors.textColor,
-    marginLeft: 3
-  }
+    marginLeft: 3,
+  },
 });
-export default styles;  
+export default styles;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Image, View, StyleSheet, Text } from 'react-native';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
+import {Image, View, StyleSheet, Text} from 'react-native';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
 import colors from '../Styles/Colors';
 import Images from '../Styles/Images';
 import Home from '../Screen/MainScreens/Home';
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   tabBarIcon: {
     width: 27,
     height: 27,
-    tintColor: '#8AA2C6'
+    tintColor: '#8AA2C6',
   },
   tabBarIconFocused: {
     width: 27,
@@ -54,42 +54,53 @@ const styles = StyleSheet.create({
 
 export default createBottomTabNavigator(
   {
-    Home: { screen: Home },
-    Projects: { screen: Projects },
-    Profile: { screen: Profile },
+    Home: {screen: Home},
+    Projects: {screen: Projects},
+    Profile: {screen: Profile},
   },
   {
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused }) => {
-        const { routeName } = navigation.state;
+    defaultNavigationOptions: ({navigation}) => ({
+      tabBarIcon: ({focused}) => {
+        const {routeName} = navigation.state;
         let iconSource;
         let iconName;
 
         switch (routeName) {
           case 'Home':
             iconSource = Images.Home;
-            iconName = "Home"
+            iconName = 'Home';
             break;
           case 'Projects':
             iconSource = Images.Projects;
-            iconName = "Projects"
+            iconName = 'Projects';
             break;
           case 'Profile':
             iconSource = Images.profile;
-            iconName = "Profile"
+            iconName = 'Profile';
             break;
           default:
             iconSource = Images.Home;
-            iconName = "Home"
+            iconName = 'Home';
         }
         return (
-          <View style={[styles.tabBarItemContainer, focused && styles.tabBarItemContainerFocused]}>
+          <View
+            style={[
+              styles.tabBarItemContainer,
+              focused && styles.tabBarItemContainerFocused,
+            ]}>
             <Image
               resizeMode="contain"
               source={iconSource}
               style={[styles.tabBarIcon, focused && styles.tabBarIconFocused]}
             />
-            <Text style={{ fontSize: 13, marginTop: 5, color: focused ? colors.appHeaderColor : '#8AA2C6', }}>{iconName}</Text>
+            <Text
+              style={{
+                fontSize: 13,
+                marginTop: 5,
+                color: focused ? colors.appHeaderColor : '#8AA2C6',
+              }}>
+              {iconName}
+            </Text>
             {/* focused ? colors.appHeaderColor : '#8AA2C6', */}
           </View>
         );

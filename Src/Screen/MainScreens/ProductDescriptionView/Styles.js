@@ -1,18 +1,17 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
-import Metrics from '../../../Styles/Metrices';
+import {StyleSheet, Dimensions} from 'react-native';
 import Colors from '../../../Styles/Colors';
 
 const widthScreen = Dimensions.get('window').width;
 const styles = StyleSheet.create({
   safeViewStyle: {
     flex: 1,
-    backgroundColor: '#F7F8FA'
+    backgroundColor: '#F7F8FA',
   },
   safeViewStyle1: {
-    backgroundColor: Colors.White
+    backgroundColor: Colors.White,
   },
   mainHeader: {
-    backgroundColor: Colors.White
+    backgroundColor: Colors.White,
   },
   headerContainer: {
     width: widthScreen / 1.12,
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: widthScreen / 1.12,
     alignSelf: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   indecatorStyle: {
     width: 30,
@@ -42,7 +41,7 @@ const styles = StyleSheet.create({
   },
   mainWrapperButton: {
     flexDirection: 'row',
-    marginTop: 20
+    marginTop: 20,
   },
   buttonWrapper: {
     width: 80,
@@ -51,35 +50,35 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.appHeaderColor,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 12
+    borderRadius: 12,
   },
   mainDescriptionWrapper: {
     marginBottom: 20,
     width: widthScreen / 1.12,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   aboutDetailsText: {
     marginTop: 20,
-    fontSize: 14
+    fontSize: 14,
   },
   mainImage: {
     width: widthScreen / 1.12,
     height: 180,
     borderRadius: 12,
     marginTop: 20,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   bottomWrapper44: {
     width: widthScreen,
     height: 100,
     backgroundColor: Colors.White,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottomButtonWrapper: {
     flexDirection: 'row',
     width: widthScreen / 1.11,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   downloadButton: {
     width: 50,
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 12,
-    backgroundColor: Colors.appHeaderColor
+    backgroundColor: Colors.appHeaderColor,
   },
   downloadStyle: {
     width: 30,
@@ -100,25 +99,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
-    marginLeft: 10
+    marginLeft: 10,
   },
   donateText2: {
     fontSize: 17,
     fontWeight: '500',
-    color: Colors.White
+    color: Colors.White,
   },
   rightArrowStyle: {
     width: 30,
     height: 16,
     marginTop: 3,
-    marginLeft: 10
+    marginLeft: 10,
   },
   backContainer: {
     width: 40,
     height: 40,
     backgroundColor: 'rgba(255, 255, 255, 0.16)',
     borderRadius: 40,
-    justifyContent: "center",
+    justifyContent: 'center',
     alignItems: 'center',
     marginBottom: -60,
     marginLeft: 20,
@@ -130,28 +129,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 11,
-    backgroundColor: '#DFE8FF'
+    backgroundColor: '#DFE8FF',
   },
   mainProfileWrapper1: {
     width: 50,
     height: 50,
-    borderRadius: 11
+    borderRadius: 11,
   },
   textWrapper: {
     fontSize: 18,
-    color: '#4890F0'
+    color: '#4890F0',
   },
   titleText: {
     fontSize: 18,
     color: '#05263D',
     fontWeight: '500',
     marginTop: 11,
-    marginLeft: 15
-  },
-  mainDescriptionWrapper: {
-    marginBottom: 20,
-    width: widthScreen / 1.12,
-    alignSelf: 'center'
+    marginLeft: 15,
   },
   textWrapperHours: {
     fontSize: 15,
@@ -163,12 +157,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: Colors.White,
     borderRadius: 15,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.20,
+    shadowOpacity: 0.2,
     shadowRadius: 1.41,
 
     elevation: 2,
@@ -178,13 +172,13 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 20,
     width: '90%',
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
   title: {
     fontSize: 21,
     fontWeight: '500',
     color: '#05263D',
-    marginTop: 10
+    marginTop: 10,
   },
   description: {
     fontSize: 13,
@@ -192,4 +186,4 @@ const styles = StyleSheet.create({
     color: '#6D7E92',
   },
 });
-export default styles;  
+export default styles;
