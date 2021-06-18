@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   donateButton: {
-    marginTop: '10%',
+    // marginTop: '10%',
     width: widthScreen / 1.12,
     height: 55,
     backgroundColor: Colors.appHeaderColor,
@@ -112,6 +112,19 @@ const styles = StyleSheet.create({
     height: 13,
     marginTop: 6,
     marginLeft: 10,
+  },
+  dot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    marginHorizontal: 4,
+  },
+  paginationDots: {
+    height: 16,
+    margin: 16,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 export default styles;
