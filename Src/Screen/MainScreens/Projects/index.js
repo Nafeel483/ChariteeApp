@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Image,
@@ -27,49 +27,46 @@ class Projects extends Component {
     };
   }
   selectTabs = (value) => {
-    this.setState({tabValue: value});
+    this.setState({ tabValue: value });
   };
   getScrollData = () => {
-    this.setState({animatedData: !this.state.animatedData});
+    this.setState({ animatedData: !this.state.animatedData });
   };
   filterOpen = () => {
-    this.setState({openFilter: !this.state.openFilter});
+    this.setState({ openFilter: !this.state.openFilter });
   };
   selectCounter = (value) => {
-    this.setState({counter: value});
+    this.setState({ counter: value });
   };
   render() {
-    const {search, tabValue, animatedData, openFilter} = this.state;
-    const {counter} = this.state;
+    const { search, tabValue, animatedData, openFilter } = this.state;
+    const { counter } = this.state;
     return (
       <>
         <SafeAreaView style={Styles.mainConatiner1} />
         <SafeAreaView style={Styles.mainConatiner}>
           <View style={Styles.mainHeader}>
             <View style={Styles.headerContainer}>
-              {animatedData ? (
-                <Text style={Styles.titleText1}>{'Projects'}</Text>
-              ) : (
-                <>
-                  <Text style={Styles.titleText}>{'Projects'}</Text>
-                  <View style={Styles.emailWrapper}>
-                    <Image
-                      source={Images.Search}
-                      style={Styles.inputImageLock}
-                    />
-                    <TextInput
-                      style={Styles.emailInput}
-                      value={search}
-                      placeholder={'Enter the project name'}
-                      placeholderTextColor={Colors.textInputColor}
-                      autoCapitalize="none"
-                      onChangeText={(value) => {
-                        this.setState({search: value});
-                      }}
-                    />
-                  </View>
-                </>
-              )}
+
+              <>
+                <Text style={Styles.titleText}>{'Projects'}</Text>
+                <View style={Styles.emailWrapper}>
+                  <Image
+                    source={Images.Search}
+                    style={Styles.inputImageLock}
+                  />
+                  <TextInput
+                    style={Styles.emailInput}
+                    value={search}
+                    placeholder={'Enter the project name'}
+                    placeholderTextColor={Colors.textInputColor}
+                    autoCapitalize="none"
+                    onChangeText={(value) => {
+                      this.setState({ search: value });
+                    }}
+                  />
+                </View>
+              </>
               <View style={Styles.mainWrapperButton}>
                 {/* 1 */}
                 <TouchableOpacity
@@ -200,10 +197,10 @@ class Projects extends Component {
               </View>
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity onPress={this.filterOpen}>
-              <Image source={Images.Filter} style={Styles.filterStyle} />
-            </TouchableOpacity>
-          )}
+              <TouchableOpacity onPress={this.filterOpen}>
+                <Image source={Images.Filter} style={Styles.filterStyle} />
+              </TouchableOpacity>
+            )}
           {openFilter && (
             <FilterWrapper
               filterModel={openFilter}

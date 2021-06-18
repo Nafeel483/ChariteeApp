@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import Colors from '../../Styles/Colors';
 const widthScreen = Dimensions.get('window').width;
 const heightScreen = Dimensions.get('window').height;
@@ -199,6 +199,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     width: widthScreen / 1.12,
     alignSelf: 'center',
+  },
+  mainDescriptionWrapperBrear: {
+    marginBottom: 20,
+    width: widthScreen / 1.12,
+    alignSelf: 'center',
+    marginTop: 40
   },
   mainProfileWrapper: {
     width: 50,
