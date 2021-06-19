@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import React, { Component } from 'react';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 import Images from '../../../Styles/Images';
 import Colors from '../../../Styles/Colors';
 import * as Constants from '../../../Constants';
 import Styles from './Styles';
-import {ScrollView} from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 
 class ProductDescriptionView extends Component {
   constructor(props) {
@@ -111,21 +111,21 @@ class ProductDescriptionView extends Component {
     this.moved = false;
   }
   selectTabs = (value) => {
-    this.setState({tabValue: value});
+    this.setState({ tabValue: value });
   };
   componentDidMount = () => {
     const selectedIndex = this.props.navigation.getParam('selectedIndex');
-    this.setState({tabValue: selectedIndex});
+    this.setState({ tabValue: selectedIndex });
   };
   render() {
-    const {tabValue, product} = this.state;
+    const { tabValue, product } = this.state;
     return (
       <>
         <SafeAreaProvider>
           <SafeAreaView style={Styles.safeViewStyle1} />
           <SafeAreaView
             style={Styles.safeViewStyle}
-            forceInset={{bottom: 'never'}}>
+            forceInset={{ bottom: 'never' }}>
             <View style={Styles.mainHeader}>
               <View style={Styles.headerContainer}>
                 <View style={Styles.mainHeader1}>
@@ -263,7 +263,7 @@ class ProductDescriptionView extends Component {
                               marginTop: 15,
                               justifyContent: 'space-between',
                             }}>
-                            <View style={{flexDirection: 'row'}}>
+                            <View style={{ flexDirection: 'row' }}>
                               {data.logoName != '' ? (
                                 <View style={Styles.mainProfileWrapper}>
                                   <Text style={Styles.textWrapper}>
@@ -348,7 +348,7 @@ class ProductDescriptionView extends Component {
                   onPress={() => {
                     this.props.navigation.navigate('Donate');
                   }}>
-                  <View style={{flexDirection: 'row'}}>
+                  <View style={{ flexDirection: 'row' }}>
                     <Text style={Styles.donateText2}>{'Donate'}</Text>
                     <Image
                       source={Images.right}

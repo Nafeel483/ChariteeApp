@@ -6,7 +6,8 @@ import {
   Image,
   ScrollView,
   Dimensions,
-  FlatList
+  FlatList,
+  Share,
 } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
@@ -72,6 +73,24 @@ class ProductDescriptionAbout extends Component {
       tabValue: 1,
     };
   }
+  onShare = async () => {
+    try {
+      const result = await Share.share({
+        message: `Donate with me to ${Constants.ABOUT_TITILE}`,
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
   selectTabs = (value) => {
     this.setState({ tabValue: value });
   };
@@ -95,28 +114,19 @@ class ProductDescriptionAbout extends Component {
           <View style={{ flexDirection: 'row' }}>
             {data.logoName !== '' ? (
               <View style={Styles.mainProfileWrapper}>
-                <Text style={Styles.textWrapper}>
-                  {data.logoName}
-                </Text>
+                <Text style={Styles.textWrapper}>{data.logoName}</Text>
               </View>
             ) : (
-                <Image
-                  source={data.logo}
-                  style={Styles.mainProfileWrapper1}
-                />
-              )}
+              <Image source={data.logo} style={Styles.mainProfileWrapper1} />
+            )}
 
-            <Text style={Styles.titleText}>
-              {data.name}
-            </Text>
+            <Text style={Styles.titleText}>{data.name}</Text>
           </View>
-          <Text style={Styles.textWrapperHours}>
-            {data.hours}
-          </Text>
+          <Text style={Styles.textWrapperHours}>{data.hours}</Text>
         </View>
       </>
-    )
-  }
+    );
+  };
   render() {
     const { allImages, tabValue, product } = this.state;
     return (
@@ -143,7 +153,7 @@ class ProductDescriptionAbout extends Component {
                 images={allImages}
                 sliderBoxHeight={250}
                 inactiveDotColor={Colors.White}
-                dotColor="#FE7277"
+                dotColor={Colors.appHeaderColor}
                 onCurrentImagePressed={(index) =>
                   console.warn(`image ${index} pressed`)
                 }
@@ -199,10 +209,7 @@ class ProductDescriptionAbout extends Component {
                   <View style={Styles.dataContentWrapper1}>
                     {/* 1 */}
                     <View style={Styles.mainWrapper}>
-                      <Image
-                        source={Images.start}
-                        style={Styles.startStyle}
-                      />
+                      <Image source={Images.start} style={Styles.startStyle} />
                       <View>
                         <View
                           style={[
@@ -237,10 +244,7 @@ class ProductDescriptionAbout extends Component {
                     </View>
                     {/* 3 */}
                     <View style={Styles.mainWrapper}>
-                      <Image
-                        source={Images.heart}
-                        style={Styles.startStyle}
-                      />
+                      <Image source={Images.heart} style={Styles.startStyle} />
                       <View>
                         <View
                           style={[
@@ -344,12 +348,9 @@ class ProductDescriptionAbout extends Component {
                   </Text>
                   <TouchableOpacity
                     onPress={() => {
-                      this.props.navigation.navigate(
-                        'ProductDescriptionView',
-                        {
-                          selectedIndex: 1,
-                        },
-                      );
+                      this.props.navigation.navigate('ProductDescriptionView', {
+                        selectedIndex: 1,
+                      });
                     }}>
                     <Text style={Styles.aboutDetailsText1}>
                       {Constants.READ_MORE}
@@ -357,9 +358,7 @@ class ProductDescriptionAbout extends Component {
                   </TouchableOpacity>
                 </View>
               ) : tabValue === 2 ? (
-                <ScrollView
-                onScrollBeginDrag={this.getScrollData}
-                >
+                <ScrollView onScrollBeginDrag={this.getScrollData}>
                   <View style={Styles.mainDescriptionWrapper}>
                     {product.length > 0 &&
                       product.map((data) => {
@@ -379,11 +378,11 @@ class ProductDescriptionAbout extends Component {
                                     </Text>
                                   </View>
                                 ) : (
-                                    <Image
-                                      source={data.logo}
-                                      style={Styles.mainProfileWrapper1}
-                                    />
-                                  )}
+                                  <Image
+                                    source={data.logo}
+                                    style={Styles.mainProfileWrapper1}
+                                  />
+                                )}
 
                                 <Text style={Styles.titleText}>
                                   {data.name}
@@ -399,43 +398,39 @@ class ProductDescriptionAbout extends Component {
                   </View>
                 </ScrollView>
               ) : (
-                    <View style={Styles.mainDescriptionWrapper}>
-                      <TouchableOpacity
-                        onPress={() => {
-                          this.props.navigation.navigate(
-                            'ProductDescriptionView',
-                            {
-                              selectedIndex: 3,
-                            },
-                          );
-                        }}>
-                        <View style={Styles.cardWrapper}>
-                          <View style={Styles.cardData}>
-                            <Text style={Styles.description}>
-                              {'17.09.2020'}
-                            </Text>
-                            <Text style={Styles.title}>
-                              {'End of the year report'}
-                            </Text>
+                <View style={Styles.mainDescriptionWrapper}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      this.props.navigation.navigate('ProductDescriptionView', {
+                        selectedIndex: 3,
+                      });
+                    }}>
+                    <View style={Styles.cardWrapper}>
+                      <View style={Styles.cardData}>
+                        <Text style={Styles.description}>{'17.09.2020'}</Text>
+                        <Text style={Styles.title}>
+                          {'End of the year report'}
+                        </Text>
 
-                            <Text style={Styles.aboutDetailsText}>
-                              {Constants.PRODUCT_DESCRIPTION_1}
-                            </Text>
-                            <Text style={Styles.aboutDetailsText}>
-                              {Constants.PRODUCT_DESCRIPTION_2}
-                            </Text>
-                          </View>
-                        </View>
-                      </TouchableOpacity>
+                        <Text style={Styles.aboutDetailsText}>
+                          {Constants.PRODUCT_DESCRIPTION_1}
+                        </Text>
+                        <Text style={Styles.aboutDetailsText}>
+                          {Constants.PRODUCT_DESCRIPTION_2}
+                        </Text>
+                      </View>
                     </View>
-                  )}
+                  </TouchableOpacity>
+                </View>
+              )}
               {/* </View> */}
-
             </ScrollView>
             <View style={Styles.bottomWrapper44}>
               <View style={Styles.bottomButtonWrapper}>
-                {/* Download */}
-                <TouchableOpacity style={Styles.downloadButton}>
+                {/* Share */}
+                <TouchableOpacity
+                  style={Styles.downloadButton}
+                  onPress={this.onShare}>
                   <Image
                     source={Images.download}
                     style={Styles.downloadStyle}

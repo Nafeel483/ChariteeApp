@@ -19,7 +19,6 @@ const images = {
   Searching_Looking: require('../assests/Searching_Looking.png'),
   Globe: require('../assests/Globe.png'),
 
-
   // Auth
   homeLogo: require('../assests/HomeIcon/homeLogo.png'),
   Apple: require('../assests/HomeIcon/Apple.png'),

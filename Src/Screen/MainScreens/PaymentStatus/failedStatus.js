@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Images from '../../../Styles/Images';
 import Styles from './Styles';
 
@@ -29,7 +29,7 @@ class FailedStatus extends Component {
         <View style={Styles.bottomContainer}>
           {/* Button */}
           <TouchableOpacity style={Styles.donateButtonFailed}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
               <Text style={Styles.buttonText}>{'Try again'}</Text>
               <Image source={Images.right} style={Styles.rightArrowStyle1} />
             </View>

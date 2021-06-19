@@ -1,6 +1,6 @@
 import React from 'react';
-import {Image, View, StyleSheet, Text} from 'react-native';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import { Image, View, StyleSheet, Text } from 'react-native';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import colors from '../Styles/Colors';
 import Images from '../Styles/Images';
 import Home from '../Screen/MainScreens/Home';
@@ -54,14 +54,14 @@ const styles = StyleSheet.create({
 
 export default createBottomTabNavigator(
   {
-    Home: {screen: Home},
-    Projects: {screen: Projects},
-    Profile: {screen: Profile},
+    Home: { screen: Home },
+    Projects: { screen: Projects },
+    Profile: { screen: Profile },
   },
   {
-    defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused}) => {
-        const {routeName} = navigation.state;
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused }) => {
+        const { routeName } = navigation.state;
         let iconSource;
         let iconName;
 

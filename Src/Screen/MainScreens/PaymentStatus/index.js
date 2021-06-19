@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Images from '../../../Styles/Images';
 import Styles from './Styles';
 
@@ -72,7 +72,7 @@ class PaymentStatus extends Component {
             onPress={() => {
               this.props.navigation.navigate('Donate');
             }}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
               <Text style={Styles.buttonText}>{'Back to Main Page'}</Text>
               <Image source={Images.right} style={Styles.rightArrowStyle1} />
             </View>

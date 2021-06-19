@@ -1,6 +1,6 @@
 const colors = {
   // appHeaderColor: '#FEC95D',
-  appHeaderColor: "#FF1742",
+  appHeaderColor: '#FF1742',
   backgroundColor: '#12171D',
   textInputColor: '#B3BDCB',
   textColor: '#6D7E92',
@@ -15,7 +15,7 @@ const colors = {
   bottomColor: '#2C3D58',
   linkedinColor: '#0170b0',
   facebook: '#3A559F',
-  buttonColor:'#C29768',
+  buttonColor: '#C29768',
   ok: '#a1a6a5',
 };
 

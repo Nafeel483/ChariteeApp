@@ -1,6 +1,12 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity, SafeAreaView} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import React, { Component } from 'react';
+import {
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  SafeAreaView,
+} from 'react-native';
+import { TextInput } from 'react-native-paper';
 import Images from '../../../Styles/Images';
 import Colors from '../../../Styles/Colors';
 import * as Constants from '../../../Constants';
@@ -17,7 +23,7 @@ class Register extends Component {
   }
 
   render() {
-    const {email, password} = this.state;
+    const { email, password } = this.state;
     return (
       <>
         <SafeAreaView style={Styles.mainConatiner}>
@@ -37,7 +43,7 @@ class Register extends Component {
               style={Styles.inputWrapper}
               label="Email"
               value={email}
-              onChangeText={(text) => this.setState({email: text})}
+              onChangeText={(text) => this.setState({ email: text })}
               mode="outlined"
               theme={{
                 roundness: 12,
@@ -57,7 +63,7 @@ class Register extends Component {
               style={Styles.inputWrapper1}
               label="Password"
               value={password}
-              onChangeText={(text) => this.setState({password: text})}
+              onChangeText={(text) => this.setState({ password: text })}
               secureTextEntry={true}
               mode="outlined"
               theme={{
@@ -75,7 +81,7 @@ class Register extends Component {
             />
 
             <TouchableOpacity style={Styles.donateButton}>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: 'row' }}>
                 <Text style={Styles.buttonText}>{Constants.SIGN_UP}</Text>
                 <Image source={Images.right} style={Styles.rightArrowStyle} />
               </View>

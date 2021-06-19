@@ -13,7 +13,7 @@ const slides = [
     text: Constants.ANYWHERE_DESCRIPTION,
     image: Images.Finances,
     backgroundColor: 'white',
-    button: Constants.CONTINUE
+    button: Constants.CONTINUE,
   },
   {
     key: 2,
@@ -21,7 +21,7 @@ const slides = [
     text: Constants.ANYWHERE_DESCRIPTION,
     image: Images.Searching_Looking,
     backgroundColor: 'white',
-    button: Constants.CONTINUE
+    button: Constants.CONTINUE,
   },
   {
     key: 3,
@@ -29,8 +29,8 @@ const slides = [
     text: Constants.ANYWHERE_DESCRIPTION,
     image: Images.Globe,
     backgroundColor: 'white',
-    button: Constants.GET_STARTED
-  }
+    button: Constants.GET_STARTED,
+  },
 ];
 
 export default class ViewPagerPage extends Component {
@@ -39,7 +39,7 @@ export default class ViewPagerPage extends Component {
     this.slider = React.createRef();
     this.state = {
       showRealApp: false,
-      next: 0
+      next: 0,
     };
   }
 
@@ -51,31 +51,27 @@ export default class ViewPagerPage extends Component {
         </View>
         <View style={Styles.bottomContainer}>
           <Text style={Styles.titleText}>{item.title}</Text>
-          <Text style={Styles.descriptionText1}>
-            {item.text}
-          </Text>
-
+          <Text style={Styles.descriptionText1}>{item.text}</Text>
         </View>
       </View>
     );
-  }
+  };
   goNext = () => {
-    this.setState({ next: this.state.next + 1 })
-    this.slider?.goToSlide(this.state.next + 1, true)
-  }
+    this.setState({ next: this.state.next + 1 });
+    this.slider?.goToSlide(this.state.next + 1, true);
+  };
   RenderNextButton = () => {
     return (
       <TouchableOpacity
         style={Styles.donateButton}
-        onPress={() => this.goNext()}
-      >
+        onPress={() => this.goNext()}>
         <View style={{ flexDirection: 'row' }}>
           <Text style={Styles.donateText}>{Constants.CONTINUE}</Text>
           <Image source={Images.right} style={Styles.rightArrowStyle} />
         </View>
       </TouchableOpacity>
     );
-  }
+  };
   RenderDoneButton = () => {
     return (
       <TouchableOpacity
@@ -89,24 +85,23 @@ export default class ViewPagerPage extends Component {
         </View>
       </TouchableOpacity>
     );
-  }
+  };
   changeSlide = (e) => {
-    this.setState({ next: e })
-  }
+    this.setState({ next: e });
+  };
   render() {
     return (
-
       <AppIntroSlider
         ref={(ref) => (this.slider = ref)}
         onSlideChange={(e) => this.changeSlide(e)}
         renderItem={this._renderItem}
-        data={slides} onDone={this._onDone}
+        data={slides}
+        onDone={this._onDone}
         bottomButton={true}
         renderNextButton={this.RenderNextButton}
         renderDoneButton={this.RenderDoneButton}
         dotStyle={{ backgroundColor: '#ECEBED' }}
         activeDotStyle={{ backgroundColor: Colors.appHeaderColor }}
-
       />
     );
   }

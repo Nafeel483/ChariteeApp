@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Modal from 'react-native-modal';
 import Styles from './Styles';
 import CheckBox from '@react-native-community/checkbox';
@@ -21,74 +21,74 @@ class FilterWrapper extends Component {
     };
   }
   handleChangeFlag = (selectedOption) => {
-    this.setState({language: selectedOption});
+    this.setState({ language: selectedOption });
   };
   selectAll = (newValue) => {
-    const {counter} = this.props;
+    const { counter } = this.props;
     if (newValue === true) {
       this.props.selectCounter(counter + 1);
-      this.setState({all: newValue});
+      this.setState({ all: newValue });
     } else {
       this.props.selectCounter(counter - 1);
-      this.setState({all: newValue});
+      this.setState({ all: newValue });
     }
   };
   selectAdult = (newValue) => {
-    const {counter} = this.props;
+    const { counter } = this.props;
     if (newValue === true) {
       this.props.selectCounter(counter + 1);
-      this.setState({adult: newValue});
+      this.setState({ adult: newValue });
     } else {
       this.props.selectCounter(counter - 1);
-      this.setState({adult: newValue});
+      this.setState({ adult: newValue });
     }
   };
   selectChildren = (newValue) => {
-    const {counter} = this.props;
+    const { counter } = this.props;
     if (newValue === true) {
       this.props.selectCounter(counter + 1);
-      this.setState({children: newValue});
+      this.setState({ children: newValue });
     } else {
       this.props.selectCounter(counter - 1);
-      this.setState({children: newValue});
+      this.setState({ children: newValue });
     }
   };
 
   selectElderly = (newValue) => {
-    const {counter} = this.props;
+    const { counter } = this.props;
     if (newValue === true) {
       this.props.selectCounter(counter + 1);
-      this.setState({elderly: newValue});
+      this.setState({ elderly: newValue });
     } else {
       this.props.selectCounter(counter - 1);
-      this.setState({elderly: newValue});
+      this.setState({ elderly: newValue });
     }
   };
 
   selectAnimal = (newValue) => {
-    const {counter} = this.props;
+    const { counter } = this.props;
     if (newValue === true) {
       this.props.selectCounter(counter + 1);
-      this.setState({animals: newValue});
+      this.setState({ animals: newValue });
     } else {
       this.props.selectCounter(counter - 1);
-      this.setState({animals: newValue});
+      this.setState({ animals: newValue });
     }
   };
 
   selectEcology = (newValue) => {
-    const {counter} = this.props;
+    const { counter } = this.props;
     if (newValue === true) {
       this.props.selectCounter(counter + 1);
-      this.setState({ecology: newValue});
+      this.setState({ ecology: newValue });
     } else {
       this.props.selectCounter(counter - 1);
-      this.setState({ecology: newValue});
+      this.setState({ ecology: newValue });
     }
   };
 
   render() {
-    const {all, adult, children, elderly, animals, ecology, language} =
+    const { all, adult, children, elderly, animals, ecology, language } =
       this.state;
     const Language = ['Breakfast', 'Lunch', 'Dinner', 'Snaks'];
     return (
@@ -148,7 +148,7 @@ class FilterWrapper extends Component {
                   options={Language}
                 />
                 <Image
-                  style={{width: 20, height: 20, marginTop: 10}}
+                  style={{ width: 20, height: 20, marginTop: 10 }}
                   source={Images.down}
                 />
               </View>
@@ -273,7 +273,7 @@ class FilterWrapper extends Component {
                 </TouchableOpacity>
                 {/* Donate */}
                 <TouchableOpacity style={Styles.donateButton}>
-                  <View style={{flexDirection: 'row'}}>
+                  <View style={{ flexDirection: 'row' }}>
                     <Text style={Styles.donateText}>{'Show 20 projects'}</Text>
                     <Image
                       source={Images.right}
