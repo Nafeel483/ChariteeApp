@@ -28,7 +28,11 @@ class FailedStatus extends Component {
 
         <View style={Styles.bottomContainer}>
           {/* Button */}
-          <TouchableOpacity style={Styles.donateButtonFailed}>
+          <TouchableOpacity
+            style={Styles.donateButtonFailed}
+            onPress={() => {
+              this.props.navigation.navigate('Donate');
+            }}>
             <View style={{ flexDirection: 'row' }}>
               <Text style={Styles.buttonText}>{'Try again'}</Text>
               <Image source={Images.right} style={Styles.rightArrowStyle1} />
@@ -39,7 +43,7 @@ class FailedStatus extends Component {
           <TouchableOpacity
             style={Styles.failedHomeButton}
             onPress={() => {
-              this.props.navigation.navigate('Donate');
+              this.props.navigation.navigate('main');
             }}>
             <Text style={Styles.failedButtonText}>{'Back to Main Page'}</Text>
           </TouchableOpacity>
