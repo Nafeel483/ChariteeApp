@@ -186,9 +186,9 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: -60,
+  
     marginLeft: 20,
-    zIndex: 1,
+    marginTop: 40,
   },
   indecatorStyle: {
     width: 30,

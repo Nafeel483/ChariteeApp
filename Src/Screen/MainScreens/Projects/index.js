@@ -166,10 +166,7 @@ class Projects extends Component {
           </View>
 
           <ScrollView
-            onScrollBeginDrag={this.getScrollData}
-            onScrollEndDrag={this.getScrollData}
-            disableIntervalMomentum={true}
-            disableScrollViewPanResponder={true}>
+           >
             <View style={Styles.mainScrollWrapper}>
               {ProjectListData?.listData.length > 0 &&
                 ProjectListData.listData.map((data) => (

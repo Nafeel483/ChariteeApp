@@ -122,22 +122,25 @@ class ProductDescriptionAbout extends Component {
     return (
       <>
         <SafeAreaProvider>
-          <SafeAreaView style={Styles.safeViewStyle1} />
           <SafeAreaView
             style={Styles.safeViewStyle}
-            forceInset={{ bottom: 'never' }}>
+            forceInset={{ bottom: 'never', top: 'never' }}>
             <ScrollView scrollEnabled={false}>
-              {/* <View style={{ marginTop: 20 }}> */}
-              <View style={Styles.backContainer}>
-                <TouchableOpacity
-                  onPress={() => {
-                    this.props.navigation.navigate('main');
-                  }}>
-                  <Image
-                    source={Images.backIcon}
-                    style={Styles.indecatorStyle}
-                  />
-                </TouchableOpacity>
+              <View style={{
+                marginBottom: -80,
+                zIndex: 1,
+              }}>
+                <View style={Styles.backContainer}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      this.props.navigation.navigate('main');
+                    }}>
+                    <Image
+                      source={Images.backIcon}
+                      style={Styles.indecatorStyle}
+                    />
+                  </TouchableOpacity>
+                </View>
               </View>
               <SliderBox
                 images={allImages}
@@ -358,7 +361,7 @@ class ProductDescriptionAbout extends Component {
                 </View>
               ) : tabValue === 2 ? (
                 <ScrollView
-                onScrollBeginDrag={this.getScrollData}
+                  onScrollBeginDrag={this.getScrollData}
                 >
                   <View style={Styles.mainDescriptionWrapper}>
                     {product.length > 0 &&
