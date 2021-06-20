@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import { View, Image, Text, TouchableOpacity, Share } from 'react-native';
 import Images from '../../../Styles/Images';
 import Styles from './Styles';
 
@@ -9,6 +9,25 @@ class PaymentStatus extends Component {
     this.state = {};
     this.moved = false;
   }
+
+  onShare = async () => {
+    try {
+      const result = await Share.share({
+        message: `Check it out! I just donated 10 € to help with Oxygen for Varuna`,
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   render() {
     return (
@@ -30,10 +49,7 @@ class PaymentStatus extends Component {
           </View>
 
           {/* 1 */}
-          <TouchableOpacity
-            onPress={() => {
-              this.props.navigation.navigate('FailedStatus');
-            }}>
+          <TouchableOpacity onPress={this.onShare}>
             <View style={Styles.showPaymentWrapper}>
               <Text style={Styles.description2}>
                 {
@@ -70,9 +86,9 @@ class PaymentStatus extends Component {
           <TouchableOpacity
             style={Styles.donateButton}
             onPress={() => {
-              this.props.navigation.navigate('Donate');
+              this.props.navigation.navigate('main');
             }}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
               <Text style={Styles.buttonText}>{'Back to Main Page'}</Text>
               <Image source={Images.right} style={Styles.rightArrowStyle1} />
             </View>

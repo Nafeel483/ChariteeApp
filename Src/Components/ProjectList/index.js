@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Text, ImageBackground, Dimensions} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, ImageBackground, Dimensions } from 'react-native';
 import Styles from './Styles';
 import Colors from '../../Styles/Colors';
 import * as Progress from 'react-native-progress';
@@ -13,7 +13,7 @@ class ProjectList extends Component {
   }
 
   render() {
-    const {mainImage, title, description, percent, price, bar} =
+    const { mainImage, title, description, percent, price, bar } =
       this.props.projectData;
     return (
       <>
@@ -21,8 +21,9 @@ class ProjectList extends Component {
           <ImageBackground
             style={Styles.mainImage}
             source={mainImage}
-            imageStyle={{borderTopLeftRadius: 15, borderTopRightRadius: 15}}>
-            <View style={{flexDirection: 'row', marginTop: 20, marginLeft: 20}}>
+            imageStyle={{ borderTopLeftRadius: 15, borderTopRightRadius: 15 }}>
+            <View
+              style={{ flexDirection: 'row', marginTop: 20, marginLeft: 20 }}>
               <View style={Styles.labelContainer}>
                 <Text
                   style={{

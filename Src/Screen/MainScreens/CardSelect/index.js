@@ -1,10 +1,16 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity, SafeAreaView} from 'react-native';
+import React, { Component } from 'react';
+import {
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  SafeAreaView,
+} from 'react-native';
 import Images from '../../../Styles/Images';
 import Colors from '../../../Styles/Colors';
 import * as Constants from '../../../Constants';
 import Styles from './Styles';
-import {ScrollView} from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 
 class CardSelect extends Component {
   constructor(props) {
@@ -48,13 +54,13 @@ class CardSelect extends Component {
 
   selectOption = (value) => {
     if (value === this.state.paymentSelect) {
-      this.setState({paymentSelect: null});
+      this.setState({ paymentSelect: null });
     } else {
-      this.setState({paymentSelect: value});
+      this.setState({ paymentSelect: value });
     }
   };
   render() {
-    const {cardData, paymentSelect} = this.state;
+    const { cardData, paymentSelect } = this.state;
     return (
       <>
         <SafeAreaView style={Styles.mainConatiner}>
@@ -89,7 +95,7 @@ class CardSelect extends Component {
                         onPress={() => {
                           this.selectOption(index);
                         }}>
-                        <View style={{flexDirection: 'row', marginLeft: 15}}>
+                        <View style={{ flexDirection: 'row', marginLeft: 15 }}>
                           <Image
                             source={
                               paymentSelect === index
@@ -134,14 +140,14 @@ class CardSelect extends Component {
               onPress={() => {
                 this.props.navigation.navigate('CreditCardDetails');
               }}>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: 'row' }}>
                 <Text style={Styles.buttonText}>{'Continue '}</Text>
                 <Image source={Images.right} style={Styles.rightArrowStyle1} />
               </View>
             </TouchableOpacity>
           ) : (
             <TouchableOpacity style={Styles.donateButton}>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: 'row' }}>
                 <Text style={Styles.buttonText}>{'Donate €10 '}</Text>
                 <Image source={Images.right} style={Styles.rightArrowStyle1} />
               </View>

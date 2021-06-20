@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import Colors from '../../Styles/Colors';
 
 const widthScreen = Dimensions.get('window').width;
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
     elevation: 2,
-    marginTop:15
+    marginBottom: 20,
   },
   mainImage: {
     width: '100%',

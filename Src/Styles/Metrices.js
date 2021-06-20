@@ -1,6 +1,6 @@
-import {Dimensions, Platform} from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 const sHeight = width < height ? height : width;
 const sWidth = width < height ? width : height;
 const metrics = {

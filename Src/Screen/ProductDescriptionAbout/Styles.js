@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     width: widthScreen / 1.12,
     alignSelf: 'center',
-    marginTop: 40
+    marginTop: 40,
   },
   mainProfileWrapper: {
     width: 50,

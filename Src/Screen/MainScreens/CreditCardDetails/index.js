@@ -1,6 +1,12 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity, SafeAreaView} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import React, { Component } from 'react';
+import {
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  SafeAreaView,
+} from 'react-native';
+import { TextInput } from 'react-native-paper';
 import ToggleSwitch from 'toggle-switch-react-native';
 import Images from '../../../Styles/Images';
 import Colors from '../../../Styles/Colors';
@@ -22,7 +28,7 @@ class CreditCardDetails extends Component {
   }
 
   render() {
-    const {cardNumber, CVC, expiryDate, toogleValue, showPaymentModel} =
+    const { cardNumber, CVC, expiryDate, toogleValue, showPaymentModel } =
       this.state;
     return (
       <>
@@ -61,7 +67,7 @@ class CreditCardDetails extends Component {
               label="Card number"
               placeholder="Enter a 16 digit number"
               value={cardNumber}
-              onChangeText={(text) => this.setState({cardNumber: text})}
+              onChangeText={(text) => this.setState({ cardNumber: text })}
               mode="outlined"
               // right={<Image source={Images.Icon_color} style={{ width: 25, height: 25 }} />}
               right={
@@ -70,7 +76,7 @@ class CreditCardDetails extends Component {
                     cardNumber.length > 0 ? Images.Delete : Images.Icon_color
                   }
                   color={cardNumber.length > 0 ? '#B3BDCB' : '#4890F0'}
-                  style={{marginTop: 12}}
+                  style={{ marginTop: 12 }}
                 />
               }
               theme={{
@@ -98,7 +104,7 @@ class CreditCardDetails extends Component {
                 label="Expiration date"
                 placeholder="Expiration date"
                 value={expiryDate}
-                onChangeText={(text) => this.setState({expiryDate: text})}
+                onChangeText={(text) => this.setState({ expiryDate: text })}
                 mode="outlined"
                 theme={{
                   roundness: 12,
@@ -118,13 +124,13 @@ class CreditCardDetails extends Component {
                 label="CVV"
                 placeholder="CVV"
                 value={CVC}
-                onChangeText={(text) => this.setState({CVC: text})}
+                onChangeText={(text) => this.setState({ CVC: text })}
                 mode="outlined"
                 right={
                   <TextInput.Icon
                     name={Images.information}
                     color={'#4890F0'}
-                    style={{marginTop: 15}}
+                    style={{ marginTop: 15 }}
                   />
                 }
                 theme={{
@@ -152,10 +158,10 @@ class CreditCardDetails extends Component {
                 onColor={Colors.appHeaderColor}
                 offColor="#FEEFEF"
                 label=""
-                labelStyle={{color: 'black', fontWeight: '900'}}
+                labelStyle={{ color: 'black', fontWeight: '900' }}
                 size="medium"
                 onToggle={(isOn) => {
-                  this.setState({toogleValue: isOn, showPaymentModel: isOn});
+                  this.setState({ toogleValue: isOn, showPaymentModel: isOn });
                 }}
               />
 
@@ -171,7 +177,7 @@ class CreditCardDetails extends Component {
             onPress={() => {
               this.props.navigation.navigate('PaymentStatus');
             }}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
               <Text style={Styles.buttonText}>{'Donate €10 '}</Text>
               <Image source={Images.right} style={Styles.rightArrowStyle1} />
             </View>
@@ -188,13 +194,13 @@ class CreditCardDetails extends Component {
               transparent={true}
               isVisible={showPaymentModel}
               onBackdropPress={() => {
-                this.setState({showPaymentModel: false});
+                this.setState({ showPaymentModel: false });
               }}
-              style={{flex: 1, justifyContent: 'flex-end', marginBottom: 30}}>
+              style={{ flex: 1, justifyContent: 'flex-end', marginBottom: 30 }}>
               <View style={Styles.modalCont1}>
                 <TouchableOpacity
                   onPress={() => {
-                    this.setState({showPaymentModel: false});
+                    this.setState({ showPaymentModel: false });
                   }}>
                   <Image
                     source={Images.dismiss}
@@ -228,7 +234,7 @@ class CreditCardDetails extends Component {
                   onPress={() => {
                     this.props.navigation.navigate('PaymentStatus');
                   }}>
-                  <View style={{flexDirection: 'row'}}>
+                  <View style={{ flexDirection: 'row' }}>
                     <Text style={Styles.buttonText}>{'Ok'}</Text>
                   </View>
                 </TouchableOpacity>

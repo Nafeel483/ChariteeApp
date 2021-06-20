@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import Images from '../../../Styles/Images';
 import Styles from './Styles';
 
@@ -36,7 +36,7 @@ class Donate extends Component {
           {/* 1 */}
           <TouchableOpacity>
             <View style={Styles.showPaymentWrapper}>
-              <View style={{flexDirection: 'row', marginLeft: 15}}>
+              <View style={{ flexDirection: 'row', marginLeft: 15 }}>
                 <View style={Styles.mainProfileWrapper}>
                   <Image
                     source={Images.Emoji}
@@ -55,7 +55,7 @@ class Donate extends Component {
               this.props.navigation.navigate('DonationPayment');
             }}>
             <View style={Styles.showPaymentWrapper}>
-              <View style={{flexDirection: 'row', marginLeft: 15}}>
+              <View style={{ flexDirection: 'row', marginLeft: 15 }}>
                 <View style={Styles.mainProfileWrapper}>
                   <Image
                     source={Images.EmojiPay}

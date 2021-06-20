@@ -47,14 +47,10 @@ class Projects extends Component {
         <SafeAreaView style={Styles.mainConatiner}>
           <View style={Styles.mainHeader}>
             <View style={Styles.headerContainer}>
-
               <>
                 <Text style={Styles.titleText}>{'Projects'}</Text>
                 <View style={Styles.emailWrapper}>
-                  <Image
-                    source={Images.Search}
-                    style={Styles.inputImageLock}
-                  />
+                  <Image source={Images.Search} style={Styles.inputImageLock} />
                   <TextInput
                     style={Styles.emailInput}
                     value={search}
@@ -194,10 +190,10 @@ class Projects extends Component {
               </View>
             </TouchableOpacity>
           ) : (
-              <TouchableOpacity onPress={this.filterOpen}>
-                <Image source={Images.Filter} style={Styles.filterStyle} />
-              </TouchableOpacity>
-            )}
+            <TouchableOpacity onPress={this.filterOpen}>
+              <Image source={Images.Filter} style={Styles.filterStyle} />
+            </TouchableOpacity>
+          )}
           {openFilter && (
             <FilterWrapper
               filterModel={openFilter}

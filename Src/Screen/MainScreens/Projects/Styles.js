@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import Colors from '../../../Styles/Colors';
 
 const widthScreen = Dimensions.get('window').width;
@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
     height: 100,
     position: 'absolute',
     alignSelf: 'flex-end',
-    marginBottom: 20,
-    marginRight: 15,
+    marginBottom: 0,
+    marginRight: 0,
     bottom: 0,
     right: 0,
   },
@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
     height: 25,
     width: 25,
     position: 'absolute',
-    bottom: 75,
-    right: 20,
+    bottom: 57,
+    right: 10,
     borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center',

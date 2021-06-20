@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {SafeAreaView} from 'react-native';
+import React, { Component } from 'react';
+import { SafeAreaView } from 'react-native';
 import Styles from './Styles';
 
 class Profile extends Component {

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {SafeAreaView} from 'react-native';
+import React, { Component } from 'react';
+import { SafeAreaView } from 'react-native';
 import Styles from './Styles';
 
 class Home extends Component {
@@ -13,7 +13,7 @@ class Home extends Component {
   }
 
   render() {
-    const {email, password} = this.state;
+    const { email, password } = this.state;
     return (
       <>
         <SafeAreaView style={Styles.mainConatiner}></SafeAreaView>

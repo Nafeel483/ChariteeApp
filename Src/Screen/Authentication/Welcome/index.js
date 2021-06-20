@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {View, Image, Text, TouchableOpacity, Platform} from 'react-native';
+import React, { Component } from 'react';
+import { View, Image, Text, TouchableOpacity, Platform } from 'react-native';
 import Images from '../../../Styles/Images';
 import * as Constants from '../../../Constants';
 import Styles from './Styles';
@@ -30,7 +30,7 @@ class Welcome extends Component {
             onPress={() => {
               this.props.navigation.navigate('Register');
             }}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{ flexDirection: 'row' }}>
               <Image source={Images.gmail} style={Styles.rightArrowStyle} />
               <Text style={Styles.donateText}>{'Email'}</Text>
             </View>
@@ -41,7 +41,7 @@ class Welcome extends Component {
               onPress={() => {
                 this.props.navigation.navigate('');
               }}>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: 'row' }}>
                 <Image source={Images.Apple} style={Styles.appleStyle} />
                 <Text style={Styles.donateText1}>{'Continue with Apple'}</Text>
               </View>
@@ -50,7 +50,7 @@ class Welcome extends Component {
 
           <View style={Styles.bottomWrapper}>
             <Text style={Styles.bottomText1}>{Constants.WELCOME_BOOTOM_1}</Text>
-            <View style={{flexDirection: 'row', marginTop: 5}}>
+            <View style={{ flexDirection: 'row', marginTop: 5 }}>
               <Text style={Styles.bottomTerm}>{Constants.TERM_CONDITION}</Text>
               <Text style={Styles.bottomAnd}>{Constants.AND}</Text>
               <Text style={Styles.bottomTerm1}>{Constants.PRIVACY}</Text>

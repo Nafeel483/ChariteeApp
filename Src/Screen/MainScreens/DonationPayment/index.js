@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Image,
@@ -23,7 +23,7 @@ class DonationPayment extends Component {
   }
 
   render() {
-    const {email, password} = this.state;
+    const { email, password } = this.state;
     return (
       <>
         <SafeAreaView style={Styles.mainConatiner}>
@@ -45,11 +45,11 @@ class DonationPayment extends Component {
               placeholder="10 |€"
               placeholderTextColor={Colors.black}
               value={password}
-              onChangeText={(text) => this.setState({password: text})}
+              onChangeText={(text) => this.setState({ password: text })}
               keyboardType="numeric"
             />
             <View
-              style={{flexDirection: 'row', marginTop: 20, marginBottom: 20}}>
+              style={{ flexDirection: 'row', marginTop: 20, marginBottom: 20 }}>
               <Image source={Images.Ic} style={Styles.mainProfileWrapper1} />
 
               <Text style={Styles.titleText}>
@@ -62,7 +62,7 @@ class DonationPayment extends Component {
               onPress={() => {
                 this.props.navigation.navigate('CardSelect');
               }}>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{ flexDirection: 'row' }}>
                 <Text style={Styles.buttonText}>{'Pay credit card '}</Text>
                 <Image source={Images.right} style={Styles.rightArrowStyle} />
               </View>
@@ -70,7 +70,7 @@ class DonationPayment extends Component {
 
             {Platform.OS == 'ios' && (
               <TouchableOpacity style={Styles.appleButton}>
-                <View style={{flexDirection: 'row'}}>
+                <View style={{ flexDirection: 'row' }}>
                   <Image source={Images.Apple} style={Styles.appleStyle} />
                   <Text style={Styles.donateText1}>{'Pay'}</Text>
                 </View>
