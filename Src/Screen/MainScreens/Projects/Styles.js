@@ -19,6 +19,12 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     marginBottom: 15,
   },
+  headerContainer1:{
+    width: widthScreen / 1.12,
+    alignSelf: 'center',
+    marginTop: '7%',
+    marginBottom: 15,
+  },
   titleText: {
     fontSize: 35,
     fontWeight: '700',
@@ -110,6 +116,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: Colors.White,
   },
+
 });
 
 export default styles;

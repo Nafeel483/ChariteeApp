@@ -6,8 +6,8 @@ import {
   TextInput,
   TouchableOpacity,
   SafeAreaView,
-  ScrollView,
 } from 'react-native';
+import ParallaxScrollView from 'react-native-parallax-scroll-view';
 import Images from '../../../Styles/Images';
 import Colors from '../../../Styles/Colors';
 import ProjectList from '../../../Components/ProjectList';
@@ -24,6 +24,7 @@ class Projects extends Component {
       animatedData: false,
       openFilter: false,
       counter: 0,
+      refreshing: false,
     };
   }
   selectTabs = (value) => {
@@ -38,131 +39,236 @@ class Projects extends Component {
   selectCounter = (value) => {
     this.setState({ counter: value });
   };
+ 
+
   render() {
-    const { search, tabValue, animatedData, openFilter } = this.state;
+    const { search, tabValue, refreshing, openFilter } = this.state;
     const { counter } = this.state;
     return (
       <>
         <SafeAreaView style={Styles.mainConatiner1} />
         <SafeAreaView style={Styles.mainConatiner}>
-          <View style={Styles.mainHeader}>
-            <View style={Styles.headerContainer}>
-              <>
-                <Text style={Styles.titleText}>{'Projects'}</Text>
-                <View style={Styles.emailWrapper}>
-                  <Image source={Images.Search} style={Styles.inputImageLock} />
-                  <TextInput
-                    style={Styles.emailInput}
-                    value={search}
-                    placeholder={'Enter the project name'}
-                    placeholderTextColor={Colors.textInputColor}
-                    autoCapitalize="none"
-                    onChangeText={(value) => {
-                      this.setState({ search: value });
-                    }}
-                  />
+          <ParallaxScrollView
+            backgroundColor="white"
+            contentBackgroundColor="#F2F5FC"
+            parallaxHeaderHeight={200}
+            stickyHeaderHeight={150}
+            renderStickyHeader={() => (
+              <View style={Styles.mainHeader}>
+                <View style={Styles.headerContainer1}>
+                  <Text style={Styles.titleText1}>{'Projects'}</Text>
+                  <View style={Styles.mainWrapperButton}>
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 1 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(1);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 1 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Activities'}
+                      </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 2 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(2);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 2 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Joint'}
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 3 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(3);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 3 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Friends'}
+                      </Text>
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 4 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(4);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 4 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Completed'}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
-              </>
-              <View style={Styles.mainWrapperButton}>
-                {/* 1 */}
-                <TouchableOpacity
-                  style={[
-                    Styles.buttonWrapper,
-                    {
-                      backgroundColor:
-                        tabValue === 1 ? Colors.appHeaderColor : '#FFEAF0',
-                    },
-                  ]}
-                  onPress={() => {
-                    this.selectTabs(1);
-                  }}>
-                  <Text
-                    style={[
-                      Styles.buttonText,
-                      {
-                        color:
-                          tabValue === 1 ? Colors.White : Colors.appHeaderColor,
-                      },
-                    ]}>
-                    {'Activities'}
-                  </Text>
-                </TouchableOpacity>
-                {/* 2 */}
-                <TouchableOpacity
-                  style={[
-                    Styles.buttonWrapper,
-                    {
-                      backgroundColor:
-                        tabValue === 2 ? Colors.appHeaderColor : '#FFEAF0',
-                    },
-                  ]}
-                  onPress={() => {
-                    this.selectTabs(2);
-                  }}>
-                  <Text
-                    style={[
-                      Styles.buttonText,
-                      {
-                        color:
-                          tabValue === 2 ? Colors.White : Colors.appHeaderColor,
-                      },
-                    ]}>
-                    {'Joint'}
-                  </Text>
-                </TouchableOpacity>
-                {/* 3 */}
-                <TouchableOpacity
-                  style={[
-                    Styles.buttonWrapper,
-                    {
-                      backgroundColor:
-                        tabValue === 3 ? Colors.appHeaderColor : '#FFEAF0',
-                    },
-                  ]}
-                  onPress={() => {
-                    this.selectTabs(3);
-                  }}>
-                  <Text
-                    style={[
-                      Styles.buttonText,
-                      {
-                        color:
-                          tabValue === 3 ? Colors.White : Colors.appHeaderColor,
-                      },
-                    ]}>
-                    {'Friends'}
-                  </Text>
-                </TouchableOpacity>
-
-                {/* 4 */}
-                <TouchableOpacity
-                  style={[
-                    Styles.buttonWrapper,
-                    {
-                      backgroundColor:
-                        tabValue === 4 ? Colors.appHeaderColor : '#FFEAF0',
-                    },
-                  ]}
-                  onPress={() => {
-                    this.selectTabs(4);
-                  }}>
-                  <Text
-                    style={[
-                      Styles.buttonText,
-                      {
-                        color:
-                          tabValue === 4 ? Colors.White : Colors.appHeaderColor,
-                      },
-                    ]}>
-                    {'Completed'}
-                  </Text>
-                </TouchableOpacity>
               </View>
-            </View>
-          </View>
+            )}
 
-          <ScrollView
-           >
+            renderForeground={() => (
+              <View style={Styles.mainHeader}>
+                <View style={Styles.headerContainer}>
+                  <>
+                    <Text style={Styles.titleText}>{'Projects'}</Text>
+                    <View style={Styles.emailWrapper}>
+                      <Image source={Images.Search} style={Styles.inputImageLock} />
+                      <TextInput
+                        style={Styles.emailInput}
+                        value={search}
+                        placeholder={'Enter the project name'}
+                        placeholderTextColor={Colors.textInputColor}
+                        autoCapitalize="none"
+                        onChangeText={(value) => {
+                          this.setState({ search: value });
+                        }}
+                      />
+                    </View>
+                  </>
+                  <View style={Styles.mainWrapperButton}>
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 1 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(1);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 1 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Activities'}
+                      </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 2 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(2);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 2 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Joint'}
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 3 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(3);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 3 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Friends'}
+                      </Text>
+                    </TouchableOpacity>
+
+
+                    <TouchableOpacity
+                      style={[
+                        Styles.buttonWrapper,
+                        {
+                          backgroundColor:
+                            tabValue === 4 ? Colors.appHeaderColor : '#FFEAF0',
+                        },
+                      ]}
+                      onPress={() => {
+                        this.selectTabs(4);
+                      }}>
+                      <Text
+                        style={[
+                          Styles.buttonText,
+                          {
+                            color:
+                              tabValue === 4 ? Colors.White : Colors.appHeaderColor,
+                          },
+                        ]}>
+                        {'Completed'}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </View>
+            )}>
             <View style={Styles.mainScrollWrapper}>
               {ProjectListData?.listData.length > 0 &&
                 ProjectListData.listData.map((data) => (
@@ -181,7 +287,7 @@ class Projects extends Component {
                   </>
                 ))}
             </View>
-          </ScrollView>
+          </ParallaxScrollView>
           {counter !== 0 ? (
             <TouchableOpacity onPress={this.filterOpen}>
               <Image source={Images.FilterRed} style={Styles.filterStyle} />
@@ -190,10 +296,10 @@ class Projects extends Component {
               </View>
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity onPress={this.filterOpen}>
-              <Image source={Images.Filter} style={Styles.filterStyle} />
-            </TouchableOpacity>
-          )}
+              <TouchableOpacity onPress={this.filterOpen}>
+                <Image source={Images.Filter} style={Styles.filterStyle} />
+              </TouchableOpacity>
+            )}
           {openFilter && (
             <FilterWrapper
               filterModel={openFilter}
